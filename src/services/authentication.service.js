@@ -30,7 +30,8 @@ async function login(credentials) {
         password: credentials.password,
         device_token: credentials.deviceToken,
         grant_type: GrantType.PASSWORD,
-        client_id: config.clientId
+        client_id: config.clientId,
+        scope: "internal"
     });
 
     let response = await connect.post({
